@@ -1,0 +1,18 @@
+---
+# tasks file for influx-backup
+- name: Install boto3
+  apt: name=python-boto state=present
+
+- name: Create backups directory
+  sudo_user: "{{ deploy_user }}"
+  file: path=/home/{{deploy_user}}/backups state=directory
+
+- name: Copy dumper.py
+  copy: src=dumper.py.j2 dest=/home/{{deploy_user}}/dumper.py owner="{{ deploy_user }}"
+
+- name: Setup dumper cron task
+  cron: name="influxdb backup" 
+        minute=0
+        hour=5
+        user="{{ deploy_user }}"
+        job="/bin/bash -l -c 'python /home/{{deploy_user}}/dumper.py -b {{influx_db_name}}'"

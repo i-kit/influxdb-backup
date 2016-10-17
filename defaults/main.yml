@@ -1,0 +1,10 @@
+---
+# defaults file for influx-backup
+influx_db_name: database_name
+backup_path: '/var/tmp/restore/'
+influx_data_dir: "/var/lib/influxdb/data"
+influx_meta_dir: "/var/lib/influxdb/meta"
+backup_backet: ""
+access_key_id: ""
+secret_key: ""
+upload_folder: "influxdb"

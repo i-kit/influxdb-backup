@@ -1,0 +1,14 @@
+galaxy_info:
+  author: Sergei Alekseenko
+  description: Simple backup role based on https://github.com/evanrich/influx2S3 script
+  company: teachbase
+  license: GPLv2
+
+  min_ansible_version: 1.2
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+  galaxy_tags: ['influxdb']
+  dependencies: []
+  
