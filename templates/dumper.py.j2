@@ -28,6 +28,7 @@ BACKUP_BUCKET = '{{backup_backet}}'
 ACCESS_KEY_ID = '{{access_key_id}}'
 SECRET_KEY = '{{secret_key}}'
 UPLOAD_FOLDER = '{{upload_folder}}'
+TOKEN = '{{ influxdb_token }}'
 CLIENT = boto3.client(
     's3',
     aws_access_key_id=ACCESS_KEY_ID,
