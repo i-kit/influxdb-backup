@@ -1,7 +1,7 @@
 influx-backup
 =========
 
-Simple backup role based on https://github.com/evanrich/influx2S3 script
+InfluxDB role, adopted for InfluxDB v2 OSS edition
 
 Role Variables
 --------------
@@ -25,7 +25,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: alekseenkoss77.influx-backup }
+         - { role: influx-backup }
 
 License
 -------
